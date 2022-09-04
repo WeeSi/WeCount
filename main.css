@@ -2,16 +2,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.badge {
-    padding: 7px 20px;
-    background-color: #efeeff;
-    color: #a29bf4;
-    font-weight: 600;
-    width: fit-content;
-    border-radius: 90px;
-    font-size: 12px;
-}
-
 button {
     background-color: #54a0ff;
     color: white;
@@ -22,6 +12,16 @@ button {
     font-size: 12px;
     font-weight: 100;
     cursor: pointer;
+}
+
+.badge {
+    padding: 7px 20px;
+    background-color: #efeeff;
+    color: #a29bf4;
+    font-weight: 600;
+    width: fit-content;
+    border-radius: 90px;
+    font-size: 12px;
 }
 
 .description {
