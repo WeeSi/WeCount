@@ -40,10 +40,17 @@ app.post('/scores', function (req, res) {
     let set = 0; // the number of set
     let nbPointsNecessary = 4; // the number of point necessary in a game
     let gamesToWin = 6; // the number of game win in a set
+    let gameIsWin = false;
 
     //loop through scores
     scores.map((score) => {
         const currEl = score; // the current score
+
+        // if all sets have been won
+        if(user1NbSetsWin === 3 || user2NbSetsWin === 3){
+            gameIsWin = true; 
+            return;
+        } 
 
         // add point to the user based on score id
         if (currEl.id == 1) user1Points++;
@@ -141,7 +148,7 @@ app.post('/scores', function (req, res) {
         // if there is a equality of point
         if (Math.abs((user1Points - user2Points)) == 1 && (user1Points >= nbPointsNecessary || user2Points >= nbPointsNecessary)) {
             //Aventage of a user in this scope
-            
+
             if (!games[game]) games[game] = [];
 
             // object of the result
@@ -160,6 +167,7 @@ app.post('/scores', function (req, res) {
         }
     });
 
+    if(gameIsWin) delete sets.splice(-1);
     //send the result
     res.send(sets);
 })

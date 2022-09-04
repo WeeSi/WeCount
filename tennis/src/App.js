@@ -89,7 +89,7 @@ const App = () => {
 
       <Button text={"Ajouter un point"} action={addPoint} disabled={gameFinished} />
 
-      <Table users={users} sets={sets} currentGame={currentGame} />
+      <Table users={users} sets={sets} currentGame={currentGame} gameFinished={gameFinished} />
 
       <Button text={"Vérifier le score"} action={checkScores} />
 
@@ -114,7 +114,7 @@ const Form = ({ users, userone, useronelevel, usertwo, usertwolevel, setUsersDat
   const keydown = (evt) => {
     exceptions.includes(evt.key) && evt.preventDefault();
   }
-  
+
   return (
     <>
       {!users.length && <>
@@ -171,7 +171,7 @@ const Button = ({ text, action, disabled }) => {
     </div>
   )
 }
-const Table = ({ sets, currentGame, users }) => {
+const Table = ({ sets, currentGame, users, gameFinished }) => {
   return (
     <>
       {sets.length > 0 && <>
@@ -186,14 +186,15 @@ const Table = ({ sets, currentGame, users }) => {
             {sets.map((el, index) => {
               return <th key={`set ${index + 1}`}>Set {index + 1}</th>
             })}
-            <th>Current Game</th>
+            {!gameFinished && <th>Current Game</th>}
           </tr>
           <tr>
             <th scope="row">{users[0].name}</th>
             {sets.map((el, index) => {
               return <td key={index + el[el.length - 1].user1NbGamesWin}>{el[el.length - 1].user1NbGamesWin}</td>
             })}
-            <td><PointConverter point={currentGame?.user1Points || 0} /></td>
+
+            {!gameFinished && <td><PointConverter point={currentGame?.user1Points || 0} /></td>}
 
           </tr>
           <tr>
@@ -201,9 +202,7 @@ const Table = ({ sets, currentGame, users }) => {
             {sets.map((el, index) => {
               return <td key={el[el.length - 1].user2Points + index}>{el[el.length - 1].user2NbGamesWin}</td>
             })}
-            <td>
-              <td><PointConverter point={currentGame?.user2Points || 0} /></td>
-            </td>
+            {!gameFinished && <td><PointConverter point={currentGame?.user2Points || 0} /></td>}
           </tr>
         </table>
       </>}
