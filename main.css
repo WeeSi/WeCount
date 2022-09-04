@@ -1,0 +1,99 @@
+body{
+    font-family: "Roboto",sans-serif;
+}
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.main-div {
+    width: 260px;
+    border-radius: 15px;
+    border: 1px solid #ededed;
+    padding: 20px;
+}
+
+.div-marge {
+    margin: 15px 0 0 0;
+}
+
+.badge {
+    padding: 7px 20px;
+    background-color: #efeeff;
+    color: #a29bf4;
+    font-weight: 600;
+    width: fit-content;
+    border-radius: 90px;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 21px;
+    margin: 0;
+    color: #3f4351;
+}
+
+.description {
+    color: #a4a6ac;
+    font-size: 13px;
+}
+
+button {
+    background-color: #54a0ff;
+    color: white;
+    padding: 10px;
+    border-radius: 90px;
+    border: 0;
+    width: 60px;
+    font-size: 12px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.picto{
+    width: 25px;
+    height: 25px;
+    border-radius: 90px;
+    background-color: #fceaec;
+}
+
+.picto:not(:first-child){
+    margin-left: -10px;
+}
+
+.picto:nth-child(2n){
+    background-color: #d2eff3;
+}
+
+.picto:nth-child(3n){
+    background-color: #fc909f;
+}
+
+.div-options{
+    padding: 15px;
+    border-radius: 90px;
+    border:1px solid #d6d6d6;
+    height: 10px;
+}
+
+.icons{
+    width: 12px;
+    height: 12px;
+    background-color: #797c86;
+    border-radius: 90px;
+}
