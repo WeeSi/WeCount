@@ -1,35 +1,5 @@
-body{
-    font-family: "Roboto",sans-serif;
-}
-.flex {
-    display: flex;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.h-full {
-    height: 100%;
-}
-
-.main-div {
-    width: 260px;
-    border-radius: 15px;
-    border: 1px solid #ededed;
-    padding: 20px;
-}
-
-.div-marge {
-    margin: 15px 0 0 0;
+body {
+    font-family: "Roboto", sans-serif;
 }
 
 .badge {
@@ -40,17 +10,6 @@ body{
     width: fit-content;
     border-radius: 90px;
     font-size: 12px;
-}
-
-.title {
-    font-size: 21px;
-    margin: 0;
-    color: #3f4351;
-}
-
-.description {
-    color: #a4a6ac;
-    font-size: 13px;
 }
 
 button {
@@ -65,35 +24,77 @@ button {
     cursor: pointer;
 }
 
-.picto{
+.description {
+    color: #a4a6ac;
+    font-size: 13px;
+}
+
+.div-options {
+    padding: 15px;
+    border-radius: 90px;
+    border: 1px solid #d6d6d6;
+    height: 10px;
+}
+
+.div-marge {
+    margin: 15px 0 0 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.icons {
+    width: 12px;
+    height: 12px;
+    background-color: #797c86;
+    border-radius: 90px;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.main-div {
+    width: 260px;
+    border-radius: 15px;
+    border: 1px solid #ededed;
+    padding: 20px;
+}
+
+.title {
+    font-size: 21px;
+    margin: 0;
+    color: #3f4351;
+}
+
+.picto {
     width: 25px;
     height: 25px;
     border-radius: 90px;
     background-color: #fceaec;
 }
 
-.picto:not(:first-child){
+.picto:not(:first-child) {
     margin-left: -10px;
 }
 
-.picto:nth-child(2n){
+.picto:nth-child(2n) {
     background-color: #d2eff3;
 }
 
-.picto:nth-child(3n){
+.picto:nth-child(3n) {
     background-color: #fc909f;
-}
-
-.div-options{
-    padding: 15px;
-    border-radius: 90px;
-    border:1px solid #d6d6d6;
-    height: 10px;
-}
-
-.icons{
-    width: 12px;
-    height: 12px;
-    background-color: #797c86;
-    border-radius: 90px;
 }
